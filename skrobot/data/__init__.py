@@ -58,3 +58,15 @@ def pr2_urdfpath():
         quiet=True,
     )
     return osp.join(get_cache_dir(), 'pr2_description', 'pr2.urdf')
+
+
+def spot_urdfpath():
+    gdown.cached_download(
+        url='',
+        path=osp.join(get_cache_dir(), 'spot_description.tar.gz'),
+        md5='',
+        postprocess=gdown.extractall,
+        quiet=True,
+    )
+    return osp.join(get_cache_dir(), 'spot_description', 'spot.urdf')
+
